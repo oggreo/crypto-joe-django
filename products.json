@@ -1,0 +1,53 @@
+{
+  "products": {
+    "public": [
+      {
+        "uid": "2cecdaa8-41f1-418b-bf10-f7141b704350",
+        "name": "Doge Blend",
+        "description": "Elon approved",
+        "region": "Asia",
+        "price": 2.4,
+        "priceId": "price_1Jr0AaCbjPp1e3MrKJDScipG",
+        "currency": "BAT",
+        "theme": "Summer hits",
+        "style": "Moon",
+        "images": [
+          "https://res.cloudinary.com/dk5s8ulry/image/upload/v1635792227/coffee_blend_sample_images.001_xljxlu.png",
+          "https://cdn.shopify.com/s/files/1/0247/9066/3267/products/mancoco_ma_manblend_500g_1024x1024@2x.png?v=1566300666"
+        ]
+      },
+      {
+        "uid": "ae70aa30-6adf-4f1e-809d-6317123ff0d4",
+        "name": "BAT coffee",
+        "description": "Worth your attention",
+        "region": "Australia",
+        "theme": "One to watch",
+        "style": "Sour",
+        "price": 6.5,
+        "priceId": "price_1Jr0puCbjPp1e3MrjtwQyi6k",
+        "currency": "BAT",
+        "images": [
+          "https://res.cloudinary.com/dk5s8ulry/image/upload/v1635792227/coffee_blend_sample_images.003_dsmnqh.png",
+          "https://cdn.shopify.com/s/files/1/0247/9066/3267/products/mancoco_as_indianmonsoon_1kg_1024x1024@2x.png?v=1566300512"
+        ]
+      },
+      {
+        "uid": "ae70aa30-6adf-4f1e-809d-4517123ff0d4",
+        "name": "SOLapuchino",
+        "description": "Phantom good",
+        "region": "Europe",
+        "theme": "Belgium",
+        "style": "Bitter",
+        "price": 60.5,
+        "priceId": "price_1Jr0r0CbjPp1e3MrKVvVNJtf",
+        "currency": "BAT",
+        "images": [
+          "https://res.cloudinary.com/dk5s8ulry/image/upload/v1635792227/coffee_blend_sample_images.002_vkqoa7.png",
+          "https://cdn.shopify.com/s/files/1/0247/9066/3267/products/mancoco_as_indianmonsoon_1kg_1024x1024@2x.png?v=1566300512"
+        ]
+      }
+    ],
+    "private": [
+    ]
+  }
+}

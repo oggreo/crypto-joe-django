@@ -58,7 +58,6 @@ export default {
       }
     } catch (e) {
       console.log('product doesnt exist!')
-      console.log(e)
     }
   },
   computed: {

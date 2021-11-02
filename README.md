@@ -1,4 +1,4 @@
-# beer-to-beer
+# crypto-joe 
 
 ## Build Setup
 

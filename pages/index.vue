@@ -32,7 +32,7 @@
         <div
           class="row-start-1 lg:col-start-2 flex flex-col justify-center flex-wrap pl-10"
         >
-          <div class="text-2xl md:text-4xl lg:text-6xl italic">
+          <div class="text-xl md:text-4xl lg:text-6xl italic">
             Original <br>
             Crypto Inspired <br>
             Coffee
@@ -685,7 +685,7 @@ export default {
   },
   data () {
     return {
-      showFilterMobile: true,
+      showFilterMobile: false,
       showThemes: true,
       showRegions: true,
       showStyles: true,

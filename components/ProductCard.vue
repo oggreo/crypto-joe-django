@@ -10,7 +10,7 @@
       <!--      src="https://res.cloudinary.com/dk5s8ulry/image/upload/v1635792227/coffee_blend_sample_images.003_dsmnqh.png"-->
       <img
         alt="img"
-        class="object-cover col-span-2 pt-2 pl-2 pr-2"
+        class="object-cover col-span-2 pt-2 pl-2 pr-2 my-auto"
         :src="product.images[0]"
         height="200"
         width="200"

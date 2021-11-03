@@ -2,15 +2,16 @@
   <div class="bg-product h-screen flex justify-center">
     <div id="product-section" class="grid grid-cols-1 lg:grid-cols-3">
       <div class="w-full flex flex-row mt-10 col-start-2 grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-2 lg:gap-10">
-        <div id="product-image-section" class="md:mt-20 ml-10 lg:ml-0">
-          <nuxt-img
-            alt="img"
-            fit="cover"
-            sizes="sm:50vw md:50vw lg:300px"
-            :src="product.images[0]"
-            title="img"
-            class="mr-20"
-          />
+        <div id="product-image-section" class="md:mt-20 flex flex-row justify-center lg:ml-0">
+          <div>
+            <nuxt-img
+              alt="img"
+              fit="cover"
+              sizes="sm:50vw md:50vw lg:300px"
+              :src="product.images[0]"
+              title="img"
+            />
+          </div>
         </div>
         <div id="product-info-section" class="flex flex-col justify-evenly">
           <div class="flex flex-col h-full justify-center">

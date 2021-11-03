@@ -763,7 +763,7 @@ export default {
   },
   computed: {
     filteredProducts () {
-      return this.allProducts.filter(x => x.name.includes(this.query))
+      return this.allProducts.filter(x => x.name.toLowerCase().includes(this.query.toLowerCase()))
     }
   },
   watch: {
@@ -798,7 +798,7 @@ export default {
     filterByCriteria (criteriaArray, filteredProducts, query) {
       criteriaArray.forEach((element, index, array) => {
         if (element.isChecked) {
-          filteredProducts = filteredProducts.filter(x => x[query] === element.name)
+          filteredProducts = filteredProducts.filter(x => x[query].toLowerCase() === element.name.toLowerCase())
         }
       })
       return filteredProducts
@@ -806,7 +806,7 @@ export default {
     async filterProducts () {
       let filteredProducts = this.allProducts
       if (this.query) {
-        filteredProducts = filteredProducts.filter(x => x.name.includes(this.query))
+        filteredProducts = filteredProducts.filter(x => x.name.toLowerCase().includes(this.query.toLowerCase()))
       }
       const filteredProducts1 = await this.filterByCriteria(this.themes, filteredProducts, 'theme')
       const filteredProducts2 = await this.filterByCriteria(this.regions, filteredProducts1, 'region')

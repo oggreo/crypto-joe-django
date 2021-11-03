@@ -45,6 +45,76 @@
           "https://res.cloudinary.com/dk5s8ulry/image/upload/v1635792227/coffee_blend_sample_images.002_vkqoa7.png",
           "https://cdn.shopify.com/s/files/1/0247/9066/3267/products/mancoco_as_indianmonsoon_1kg_1024x1024@2x.png?v=1566300512"
         ]
+      },
+      {
+        "uid": "ae70aa30-6adf-4f1e-809d-4217123ff0d4",
+        "name": "ETHER LATTE",
+        "description": "Vitalik drinks this",
+        "region": "Europe",
+        "theme": "Summer hits",
+        "style": "Sweet",
+        "price": 12,
+        "priceId": "price_1Jr0r0CbjPp1e3MrKVvVNJtf",
+        "currency": "BAT",
+        "images": [
+          "https://res.cloudinary.com/dk5s8ulry/image/upload/v1635954228/coffee_blend_sample_images.004_ntnpng.png"
+        ]
+      },
+      {
+        "uid": "ae70aa30-6adf-4f1e-809d-4517133ff0d4",
+        "name": "FLAT SHIB",
+        "description": "Better than Doge",
+        "region": "Yorkshire",
+        "theme": "One to watch",
+        "style": "Sour",
+        "price": 12,
+        "priceId": "price_1Jr0r0CbjPp1e3MrKVvVNJtf",
+        "currency": "BAT",
+        "images": [
+          "https://res.cloudinary.com/dk5s8ulry/image/upload/v1635954229/coffee_blend_sample_images.005_klbluu.png"
+        ]
+      },
+      {
+        "uid": "ae70aa30-6adf-4f1e-809d-4517123f30d4",
+        "name": "AXIE ICED",
+        "description": "Buy this with your in-game profit",
+        "region": "Yorkshire",
+        "theme": "One to watch",
+        "style": "Sour",
+        "price": 12,
+        "priceId": "price_1Jr0r0CbjPp1e3MrKVvVNJtf",
+        "currency": "BAT",
+        "images": [
+          "https://res.cloudinary.com/dk5s8ulry/image/upload/v1635954228/coffee_blend_sample_images.007_xnwgi3.png"
+        ]
+      },
+      {
+        "uid": "ae70aa30-6adf-4f1e-809d-4517123ff014",
+        "name": "ADA AU LATTE",
+        "description": "Academically proven to be tasty",
+        "region": "Yorkshire",
+        "theme": "One to watch",
+        "style": "Sour",
+        "price": 12,
+        "priceId": "price_1Jr0r0CbjPp1e3MrKVvVNJtf",
+        "currency": "BAT",
+        "images": [
+          "https://res.cloudinary.com/dk5s8ulry/image/upload/v1635954229/coffee_blend_sample_images.006_c9w7gu.png"
+        ]
+      },
+      {
+        "uid": "ae70aa30-6adf-4f1e-809d-4517128ff0d4",
+        "name": "TEZOS WHITE",
+        "description": "Buy it while it's still affordable",
+        "region": "Yorkshire",
+        "theme": "One to watch",
+        "style": "Sour",
+        "price": 12,
+        "priceId": "price_1Jr0r0CbjPp1e3MrKVvVNJtf",
+        "currency": "BAT",
+        "images": [
+          "https://res.cloudinary.com/dk5s8ulry/image/upload/v1635954228/coffee_blend_sample_images.008_ovexjl.png"
+        ]
       }
     ],
     "private": [

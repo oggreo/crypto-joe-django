@@ -32,7 +32,7 @@
         <div
           class="row-start-1 lg:col-start-2 flex flex-col justify-center flex-wrap pl-10"
         >
-          <div class="text-xl md:text-4xl lg:text-6xl italic">
+          <div class="text-xl md:text-4xl lg:text-6xl italic font-black">
             Original <br>
             Crypto Inspired <br>
             Coffee
@@ -664,16 +664,18 @@
         </div>
       </section>
     </main>
+    <page-footer />
   </div>
 </template>
 
 <script>
 import SearchBar from '../components/SearchBar'
 import ProductCard from '../components/ProductCard'
+import PageFooter from '../components/PageFooter'
 
 export default {
   name: 'Index',
-  components: { ProductCard, SearchBar },
+  components: { PageFooter, ProductCard, SearchBar },
   async asyncData ({ $fire }) {
     try {
       const dbRef = $fire.database.ref('products/public')

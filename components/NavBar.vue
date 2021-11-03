@@ -112,8 +112,8 @@
           <!-- Profile dropdown -->
           <div
             class="ml-3 relative"
-            @click="showProfileDropdown=!showProfileDropdown"
           >
+            <!--            @click="showProfileDropdown=!showProfileDropdown"-->
             <div>
               <button
                 id="user-menu-button"

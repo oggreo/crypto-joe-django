@@ -54,7 +54,8 @@ export default {
   googleFonts: {
     prefetch: true,
     families: {
-      Montserrat: true
+      Montserrat: true,
+      Roboto: true
     }
   },
   // Modules: https://go.nuxtjs.dev/config-modules

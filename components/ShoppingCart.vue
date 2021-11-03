@@ -10,7 +10,7 @@
       To: "translate-x-full"
   -->
   <div class="flex justify-center">
-    <div class="w-1/2">
+    <div class="w-7/8 lg:w-1/2">
       <div class="h-full flex flex-col bg-white shadow-xl">
         <div class="flex-1 py-6 overflow-y-auto px-4 sm:px-6">
           <div class="flex items-start justify-between">
@@ -24,7 +24,6 @@
               <shopping-cart-list
                 :products="products"
               />
-
             </div>
           </div>
         </div>
@@ -34,7 +33,9 @@
             <p>Subtotal</p>
             <p>{{ subTotal }} BAT </p>
           </div>
-          <p class="mt-0.5 text-sm text-gray-500">Currently pre-order only!</p>
+          <p class="mt-0.5 text-sm text-gray-500">
+            Currently pre-order only!
+          </p>
           <div class="mt-6">
             <stripe-checkout
               ref="checkoutRef"
@@ -78,6 +79,10 @@ import ShoppingCartList from './ShoppingCartList'
 export default {
   name: 'ShoppingCart',
   components: { ShoppingCartList },
+  beforeRouteLeave (to, next, from) {
+    this.lineItems = []
+    next()
+  },
   data () {
     this.publishableKey = process.env.STRIPE_PK
     return {
@@ -85,10 +90,6 @@ export default {
       successURL: 'http://localhost:3000/',
       cancelURL: 'http://localhost:3000/'
     }
-  },
-  beforeRouteLeave (to, next, from) {
-    this.lineItems = []
-    next()
   },
   computed: {
     products () {

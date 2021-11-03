@@ -1,7 +1,7 @@
 <template>
   <!-- This example requires Tailwind CSS v2.0+ -->
   <nav class="bg-black">
-    <div class="w-full h-12 bg-red-500 text-center text-white pt-3">
+    <div class="w-full h-12 bg-red-500 text-white pt-3 flex flex-wrap justify-center text-sm lg:text-xl">
       Currently in production but you can still pre-order
     </div>
     <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -32,7 +32,7 @@
               stroke="currentColor"
               aria-hidden="true"
             >
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
             <!--
               Icon when menu is open.
@@ -49,22 +49,22 @@
               stroke="currentColor"
               aria-hidden="true"
             >
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
         </div>
         <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
           <div class="flex-shrink-0 flex items-center">
-            <img class="mr-4 block lg:hidden h-14 w-auto" src="../assets/logo.png" alt="Beer">
+            <img class="mr-24 block lg:hidden h-14 w-auto" src="../assets/logo.png" alt="Beer">
             <img class="mr-4 hidden lg:block h-14 w-auto" src="../assets/logo.png" alt="Beer">
-<!--            <div class="font-bold text-2xl">-->
-<!--              Cryp-to-Coffee-->
-<!--            </div>-->
+            <!--            <div class="font-bold text-2xl">-->
+            <!--              Cryp-to-Coffee-->
+            <!--            </div>-->
           </div>
           <div class="hidden sm:block sm:ml-6">
             <div class="mt-4 flex space-x-4">
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-              <div @click="select(index)" >
+              <div @click="select(index)">
                 <nuxt-link
                   :key="index.name"
                   to="/"
@@ -114,10 +114,10 @@
           >
             <div>
               <button
+                id="user-menu-button"
                 type="button"
                 class="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2
                        focus:ring-offset-gray-800 focus:ring-white"
-                id="user-menu-button"
                 aria-expanded="false"
                 aria-haspopup="true"
               >
@@ -142,35 +142,34 @@
                 To: "transform opacity-0 scale-95"
             -->
             <div
+              v-if="showProfileDropdown"
               class="origin-top-right absolute z-50 right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
               role="menu"
               aria-orientation="vertical"
               aria-labelledby="user-menu-button"
               tabindex="-1"
-              v-if="showProfileDropdown"
-
             >
               <!-- Active: "bg-gray-100", Not Active: "" -->
               <a
+                id="user-menu-item-0"
                 href="#"
                 class="block px-4 py-2 text-sm text-gray-700"
                 role="menuitem"
                 tabindex="-1"
-                id="user-menu-item-0"
               >Your Profile</a>
               <a
+                id="user-menu-item-1"
                 href="#"
                 class="block px-4 py-2 text-sm text-gray-700"
                 role="menuitem"
                 tabindex="-1"
-                id="user-menu-item-1"
               >Settings</a>
               <a
+                id="user-menu-item-2"
                 href="#"
                 class="block px-4 py-2 text-sm text-gray-700"
                 role="menuitem"
                 tabindex="-1"
-                id="user-menu-item-2"
               >Sign out</a>
             </div>
           </div>
@@ -180,31 +179,36 @@
 
     <!-- Mobile menu, show/hide based on menu state. -->
     <div
-      class="sm:hidden"
       id="mobile-menu"
+      class="sm:hidden"
     >
       <div class="mt-13 px-2 pt-2 pb-3 space-y-1">
         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-        <a href="#" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Market</a>
+        <nuxt-link
+          to="/"
+        >
+          <button class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">
+            Market
+          </button>
+        </nuxt-link>
 
-<!--        <a-->
-<!--          href="#"-->
-<!--          class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"-->
-<!--        >Marketplace</a>-->
+        <!--        <a-->
+        <!--          href="#"-->
+        <!--          class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"-->
+        <!--        >Marketplace</a>-->
 
-<!--        <a-->
-<!--          href="#"-->
-<!--          class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"-->
-<!--        >Projects</a>-->
+        <!--        <a-->
+        <!--          href="#"-->
+        <!--          class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"-->
+        <!--        >Projects</a>-->
 
-<!--        <a-->
-<!--          href="#"-->
-<!--          class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"-->
-<!--        >Calendar</a>-->
+        <!--        <a-->
+        <!--          href="#"-->
+        <!--          class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"-->
+        <!--        >Calendar</a>-->
       </div>
     </div>
   </nav>
-
 </template>
 
 <script>
@@ -219,14 +223,14 @@ export default {
       showProfileDropdown: false
     }
   },
-  methods: {
-    select (item) {
-      this.selected = item.name
-    }
-  },
   computed: {
     basketCount () {
       return this.$store.state.products.basket.length
+    }
+  },
+  methods: {
+    select (item) {
+      this.selected = item.name
     }
   }
 }

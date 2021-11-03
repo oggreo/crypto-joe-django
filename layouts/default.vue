@@ -3,7 +3,6 @@
     <nav-bar />
     <nuxt />
   </div>
-
 </template>
 
 <script>

@@ -16,12 +16,35 @@
     ```
   -->
   <div class="bg-mainbg">
-    <div class="bg-yellow-400 flex justify-start">
-      <nuxt-img
-        src="https://res.cloudinary.com/dk5s8ulry/image/upload/v1635795816/byac_vnyh2f.png"
-        width="300"
-        class="mx-auto"
-      />
+    <div
+      id="banner"
+      class="w-full bg-yellow-400 font-sans font-black flex justify-start"
+    >
+      <!--        class="mx-auto bg-white pl-20 pr-20 mt-10 flex flex-row"-->
+      <div
+        class="mx-auto bg-yellow-400 pl-20 pr-20 flex flex-row grid grid-cols-1 lg:grid-cols-2 grid-rows-2 lg:grid-rows-1"
+      >
+        <nuxt-img
+          src="https://res.cloudinary.com/dk5s8ulry/image/upload/v1635795816/byac_vnyh2f.png"
+          width="300"
+          class="pl-10 lg:w-full"
+        />
+        <div
+          class="row-start-1 lg:col-start-2 flex flex-col justify-center flex-wrap pl-10"
+        >
+          <div class="text-2xl md:text-4xl lg:text-6xl italic">
+            Original <br>
+            Crypto Inspired <br>
+            Coffee
+          </div>
+          <button
+            class="bg-green-700 hover:bg-green-900 text-white font-bold mt-8 pt-4 pb-10 px-4 h-10"
+            @click="getStarted('product-grid')"
+          >
+            Get started
+          </button>
+        </div>
+      </div>
     </div>
     <!--
     Mobile filter dialog
@@ -616,7 +639,7 @@
           </form>
 
           <!-- Product grid -->
-          <div class="lg:col-span-3 bg-mainbg">
+          <div ref="product-grid" class="lg:col-span-3 bg-mainbg">
             <!-- Replace with your content -->
             <search-bar
               :value.sync="query"
@@ -761,6 +784,11 @@ export default {
     }
   },
   methods: {
+    getStarted (refName) {
+      const element = this.$refs[refName]
+      const top = element.offsetTop
+      window.scrollTo(0, top)
+    },
     filterByCriteria (criteriaArray, filteredProducts, query) {
       criteriaArray.forEach((element, index, array) => {
         if (element.isChecked) {
@@ -782,3 +810,10 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+#banner {
+  font-family: Roboto;
+}
+
+</style>

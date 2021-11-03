@@ -645,16 +645,21 @@
               :value.sync="query"
             />
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-x-8 gap-y-10 mt-10">
-              <ProductCard
+              <transition
                 v-for="(product, $optionIndex) in products"
                 :key="$optionIndex"
-                :product="product"
-                class="mb-10"
-              />
+                name="slide-fade"
+                appear
+              >
+                <ProductCard
+                  :product="product"
+                  class="mb-10 hover:opacity-60"
+                />
+              </transition>
               <div />
-              <!--              <div class="border-4 border-dashed border-gray-200 rounded-lg h-96 lg:h-full" />-->
-            <!-- /End replace -->
             </div>
+            <!--              <div class="border-4 border-dashed border-gray-200 rounded-lg h-96 lg:h-full" />-->
+            <!-- /End replace -->
           </div>
         </div>
       </section>
@@ -685,6 +690,7 @@ export default {
   },
   data () {
     return {
+      show: true,
       showFilterMobile: false,
       showThemes: true,
       showRegions: true,
@@ -814,6 +820,18 @@ export default {
 <style scoped>
 #banner {
   font-family: Roboto;
+}
+
+.slide-fade-enter-active {
+  transition: all .4s ease;
+}
+.slide-fade-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateY(300px);
+  opacity: 0;
 }
 
 </style>

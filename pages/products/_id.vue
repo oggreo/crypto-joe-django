@@ -38,7 +38,7 @@
             to="/cart"
           >
             <button
-              class="w-full h-50px bg-button hover:bg-yellow-500 text-white font-bold py-2 px-4 border border-blue-700 rounded"
+              class="w-full h-50px bg-button hover:bg-yellow-500 text-white font-bold py-2 px-4 rounded"
               @click="addToBasket"
             >
               Add to basket

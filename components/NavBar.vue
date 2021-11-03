@@ -71,6 +71,7 @@
                   :class="[selected === index.name ? 'bg-white text-black font-black' : 'text-gray-300 hover:bg-gray-700 hover:text-black', 'px-3 py-2 rounded-md text-sm font-medium']"
                   :aria-current="index.current ? 'page' : undefined"
                   :href="index.href"
+                  class="hover:opacity-80"
                 >
                   {{ index.name }}
                 </nuxt-link>
@@ -85,6 +86,7 @@
                 type="button"
                 class="bg-gray-200 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2
                        focus:ring-offset-2 focus:ring-offset-gray-400 focus:ring-white"
+                :class="parseInt(basketCount) > 0 ? 'animate-pulse' : '' "
               >
                 <span class="sr-only">View notifications</span>
                 <!-- Heroicon name: outline/bell -->
@@ -187,7 +189,10 @@
         <nuxt-link
           to="/"
         >
-          <button class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">
+          <button
+            class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium hover:opacity-80"
+            aria-current="page"
+          >
             Market
           </button>
         </nuxt-link>

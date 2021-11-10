@@ -9,7 +9,7 @@
         <nuxt-img
           :alt="product.description"
           class="w-full h-full object-center object-cover"
-          :src="product.images[0]"/>
+          :src="product.mainImage"/>
       </div>
 
       <div class="ml-4 flex-1 flex flex-col">

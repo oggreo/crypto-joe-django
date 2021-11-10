@@ -8,7 +8,7 @@
               alt="img"
               fit="cover"
               sizes="sm:50vw md:50vw lg:300px"
-              :src="product.images[0]"
+              :src="product.mainImage"
               title="img"
             />
           </div>
@@ -51,26 +51,28 @@
 </template>
 
 <script>
-// import { mapState } from 'vuex'
+import ProductService from '../../services/ProductService.js'
 
 export default {
   name: 'Id',
   async asyncData ({ route, $fire, store }) {
     const uid = route.params.id
     try {
-      const dbRef = $fire.database.ref('products/public')
-      const snapshot = await dbRef.get()
-      if (snapshot.exists()) {
-        const products = snapshot.val()
-        await store.dispatch('products/setProduct', products.filter(product => product.uid === uid))
-      }
+      // const dbRef = $fire.database.ref('products/public')
+      // const snapshot = await dbRef.get()
+      // if (snapshot.exists()) {
+      //   const products = snapshot.val()
+      const response = await ProductService.getProduct(uid)
+      const product = response.data
+      console.log('product', product)
+      store.dispatch('products/setProduct', product)
     } catch (e) {
       console.log('product doesnt exist!')
     }
   },
   computed: {
     product () {
-      return this.$store.state.products.selectedProduct[0]
+      return this.$store.state.products.selectedProduct
     }
   },
   methods: {

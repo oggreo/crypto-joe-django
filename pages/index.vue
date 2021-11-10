@@ -672,19 +672,17 @@
 import SearchBar from '../components/SearchBar'
 import ProductCard from '../components/ProductCard'
 import PageFooter from '../components/PageFooter'
+import ProductService from '../services/ProductService.js'
 
 export default {
   name: 'Index',
   components: { PageFooter, ProductCard, SearchBar },
   async asyncData ({ $fire }) {
     try {
-      const dbRef = $fire.database.ref('products/public')
-      const snapshot = await dbRef.get()
-      if (snapshot.exists()) {
-        const products = snapshot.val()
-        const allProducts = snapshot.val()
-        return { products, allProducts }
-      }
+      const response = await ProductService.getProducts()
+      const products = response.data
+      const allProducts = JSON.parse(JSON.stringify(products))
+      return { products, allProducts }
     } catch (e) {
       console.log('product doesnt exist!')
       console.log(e)

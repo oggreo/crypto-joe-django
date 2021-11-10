@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const apiClient = axios.create({
-  baseURL: `http://my-json-server.typicode.com/Code-Pop/real-world-nuxt/`,
+  baseURL: 'http://127.0.0.1:8000/api/',
   withCredentials: false,
   headers: {
     Accept: 'application/json',
@@ -10,10 +10,10 @@ const apiClient = axios.create({
 })
 
 export default {
-  getEvents() {
-    return apiClient.get('/events')
+  getProducts () {
+    return apiClient.get('/product/list/')
   },
-  getEvent(id) {
-    return apiClient.get('/events/' + id)
+  getProduct (id) {
+    return apiClient.get('/product/detail/' + id)
   }
 }

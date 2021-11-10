@@ -4,14 +4,14 @@
     @click="setProduct"
   >
     <nuxt-link
-      :to="'/products/' + product.uid"
+      :to="'/products/' + product.id"
       class="grid grid-cols-5 lg:grid-cols-1"
     >
       <!--      src="https://res.cloudinary.com/dk5s8ulry/image/upload/v1635792227/coffee_blend_sample_images.003_dsmnqh.png"-->
       <img
         alt="img"
         class="object-cover col-span-2 pt-2 pl-2 pr-2 my-auto"
-        :src="product.images[0]"
+        :src="product.mainImage"
         height="200"
         width="200"
         title="img"

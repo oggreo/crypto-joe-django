@@ -75,7 +75,8 @@ export default {
       databaseURL: 'https://cryp-to-joe-default-rtdb.europe-west1.firebasedatabase.app/'
     },
     services: {
-      database: true // Just as example. Can be any other service.
+      database: true
+      // Just as example. Can be any other service.
     }
   },
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
